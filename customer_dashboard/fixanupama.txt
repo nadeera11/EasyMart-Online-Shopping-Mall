@@ -1,0 +1,3 @@
+page link
+js edit details successfully
+delete order js

@@ -1,0 +1,175 @@
+
+body {
+    margin: 0;
+    
+}
+
+.main-img {
+    height: 100vh;
+    background: url('../images/pexels-karolina-grabowska-5632402.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.main-img-header {
+    font-size: 50px;
+    font-weight: bold;
+    color: #462446;
+   
+}
+
+
+.explorer {
+   
+    margin-top:  30px;
+    margin-bottom: 10px;
+    background-color: white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.explore-header {
+   color:#462446;
+    margin-bottom: 20px;
+}
+
+.explore-btn-content{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.explore-btn {
+    
+    padding: 20px ;
+    background-color: orange;
+    text-decoration: none;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    
+}
+
+.explore-btn:hover {
+    background-color:#462446;
+}
+
+.sec-title{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color: #462446;
+
+}
+
+.sec-des{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color: #462446;
+}
+
+
+
+.body-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    height: 50vh;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.action-content {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 30%;
+    text-align: center;
+    
+    
+}
+
+.action-img {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+.action-header {
+    font-size: 17px;
+    font-weight: bold;
+    color: #462446;
+}
+
+.product-details{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+
+.action-description{
+    font-size: 15px;
+    color: #666;
+    margin: 10px 0;
+}
+
+.action2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.action-content2{
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 20%;
+    text-align: center;
+}
+
+.action-price{
+    font-size: 15;
+    color: #666;
+    margin: 10px 0;
+}
+
+
+.shop-btn {
+    display:block;
+    margin-top: 15px;
+    padding:  10px;
+    background-color: orange;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+   
+}
+
+.shop-btn:hover {
+    background-color: #462446;
+}
+
+
+
+
+

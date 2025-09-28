@@ -1,0 +1,239 @@
+body {
+    
+    margin: 0;
+    
+}
+.pagetitle80{
+    text-align: center;
+    color:#462446 ;
+    
+    font-family: 'racing sans one';
+    font-size: 40px;
+    background-color: #ddd;
+    border-radius: 5px;
+    width: 80%;
+    margin: 0 auto 20px;
+}
+.pagetitle70{
+    text-align: center;
+    color:#462446 ;
+    
+    font-family: 'racing sans one';
+    font-size: 40px;
+    background-color: #ddd;
+    border-radius: 5px;
+    width: 73%;
+    margin: 0 auto 20px;
+}
+.table {
+    width: 80%;
+    /*max-width: 1200px;*/
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.tablehead{
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+    background-color: #462446;
+    color: white;
+    font-family:'Doppio One';
+    font-weight: normal;
+}
+.tabledata{
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+    color: #462446;
+    font-family: Arial, sans-serif;
+}
+.tablerow:nth-child(even){
+background-color: #f2f2f2;
+}
+.tabledata:last-child {
+    text-align: center;
+} 
+.actionbtn1{
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #000000;
+    border-radius: 3px;
+    background-color: #b05f6d;
+    font-family:'Doppio One';
+}
+.actionbtn2{
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #000000;
+    border-radius: 3px;
+    background-color: #ff7f00;
+    font-family:'Doppio One';
+}
+.createbtn {
+    display: block;
+    width: max-content;
+    margin: 20px auto;
+    background-color: #ff7f00;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family:'Doppio One';
+}
+
+
+
+
+.emform {
+    max-width: 70%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.formlable{
+    display: block;
+    color: #462446;
+    font-family:'Doppio One';
+    font-size: 20px;
+    margin-top: 15px;
+}
+.forminput{
+    width: 98%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin: -5px auto;
+}
+.formselec{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin: -5px auto;
+}
+.submitbtn {
+    background-color: #ff7f00;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-family:'Doppio One';
+    font-size: 20px;
+    max-width: 400px;
+    margin: 15px auto;
+    display: block;
+}
+.viewbtn{
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    background-color: #b05f6d;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    max-width: 70%;
+    font-family:'Doppio One';
+    font-size: 20px;
+}
+.g-recaptcha {
+    margin: 15px 0;
+    display: flex;
+    justify-content: center; 
+}
+
+.popup {
+    width: 400px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0); /* Use scale(0) instead of scale(0.1) */
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #462446;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+
+.open-popup {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popupimg{
+    width: 100px;
+    margin-top: -50px;
+    
+}
+.popuphead{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+}
+.popupbtn{
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #ff7f00;
+    color: #000000;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Basic styles for the overlay */
+.overlay {
+    visibility: hidden; /* Hide by default */
+    opacity: 0; /* Fully transparent */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9); /* White background */
+    z-index: 900; /* Behind the popup */
+    transition: visibility 0s 0.5s, opacity 0.5s ease; /* Delay visibility change for smooth transition */
+}
+.show-overlay {
+    visibility: visible; /* Show the overlay */
+    opacity: 1; /* Fully opaque */
+    transition-delay: 0s; /* No delay for the transition */
+}
+
+/* Basic styles for popup */
+.popup {
+    visibility: hidden; /* Hide by default */
+    opacity: 0; /* Fully transparent */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    z-index: 1000; /* Ensure popup is above the overlay */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: visibility 0s 0.5s, opacity 0.5s ease; /* Delay visibility change for smooth transition */
+}
+.open-popup {
+    visibility: visible; /* Show the popup */
+    opacity: 1; /* Fully opaque */
+    transition-delay: 0s; /* No delay for the transition */
+}

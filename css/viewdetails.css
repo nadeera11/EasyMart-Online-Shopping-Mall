@@ -1,0 +1,63 @@
+body {
+    font-family: 'Doppio One', sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.container h2 {
+    color: #462446;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.user-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.user-card {
+    background-color: #f07d48ef;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.user-card span {
+    font-weight: bold;
+    color: #fff;
+}
+
+.backbtn {
+    background-color: #462446;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.backbtn:hover {
+    background-color: #ee3a1b;
+    color: white;
+}

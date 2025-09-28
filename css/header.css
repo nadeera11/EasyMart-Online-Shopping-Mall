@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #462446;
+    padding: 10px;
+    font-family: 'Doppio One';
+}
+.logo {
+    height: 80px;
+}
+.div1 {
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+.name {
+    font-family: 'Racing Sans One';
+    font-size: 44px;
+    color: white;
+    margin: 0;
+    text-align: center;
+}
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.nav-links a{
+    text-decoration: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+.nav-links a:hover {
+    color: #ffc153;
+}
+.nav-links li {
+    margin-left: 15px;
+}
+.div2 {
+    display: flex;
+}
+.div2 a {
+    text-decoration: none;
+    color: white;
+    background-color: #ff7f00;
+    padding: 8px 8px;
+    border-radius: 4px;
+    margin-left: 10px;
+}

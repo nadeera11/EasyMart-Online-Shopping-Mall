@@ -1,0 +1,101 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    overflow-x: hidden;
+}
+
+.productBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 50px auto;
+    gap: 20px; 
+}
+
+
+.left {
+    flex: 1;
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    height: 400px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-image {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 8px;
+}
+
+
+.right {
+    flex: 1;
+    background-color: #eee7e7;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    height: 400px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+.right h1 {
+    font-family: 'Doppio One', sans-serif;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
+    color: #666;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.price {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.6em;
+    color: #e45632;
+    font-weight: bold;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.buynowBtn {
+    font-family: 'Doppio One', sans-serif;
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #e45632;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    border-radius: 40px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    align-self: flex-end; /
+}
+
+.buynowBtn:hover {
+    background-color:#333 ;
+}
+

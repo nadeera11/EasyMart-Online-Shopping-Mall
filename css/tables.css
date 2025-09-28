@@ -1,0 +1,93 @@
+body {
+    font-family: 'Doppio One', sans-serif;
+    margin: 5px;
+    padding: 0;
+}
+
+.page {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background: rgb(197, 191, 191);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.table-title {
+    color: #333;
+    text-align: center;
+}
+
+.backbtn {
+    background-color: #ff7f00;
+    color: white;
+    padding: 10px 20px;
+    border: 1.5px solid #ffffff;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.address{
+    display:block;
+}
+
+.backbtn:hover {
+    background-color: #f53e1d;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    font-size: 18px;
+}
+
+table th {
+    background-color: #462446;
+    color: white;
+}
+
+tbody {
+    background-color: #ddd;
+}
+
+table tr:hover {
+    background-color: #c2c2c2;
+}
+
+table td img {
+    width: 80px;
+    height: auto;
+}
+
+.actions a {
+    text-decoration: none;
+    padding: 5px;
+    background-color: #ff7f00;
+    color: white;
+    border-radius: 5px;
+}
+
+#a-tag{
+    font-family: 'Doppio One', sans-serif;
+    background-color:#ff7f00;
+    margin-left: 20px;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    width: 40%;
+    height: 50px;
+    text-decoration: none;
+ }

@@ -1,0 +1,53 @@
+body{
+    margin: 0;
+}
+.headerbar {
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    background-color: #462446;
+    padding: 10px 30px; 
+    height: 70px;
+}
+.dashboardtitle{
+    font-size: 60px;
+    color: white;
+    text-align: center;
+    font-family: 'racing sans one';
+    margin-left: 10px;
+    letter-spacing: 2px;
+
+}
+
+.buttonset {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    background-color: #b05f6d;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.dashboardbtn {
+    background-color: #ff7f00; 
+    color: white;
+    padding: 10px 20px;
+    border: 1.5px solid #ffffff;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Doppio One';
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dashboardbtn:hover {
+    background-color: #462446;
+}
+.logo1{
+    width: 320px;
+}

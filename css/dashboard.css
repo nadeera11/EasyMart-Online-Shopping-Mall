@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.box1 {
+    background-color: #f0f0f0;
+    width: 100%;
+    min-height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.box2 {
+    display: flex;
+    flex-grow: 1;
+    height: auto; 
+}
+
+.naviTitle{
+    font-size: 30px;
+    font-weight: bold;
+    color: #ff7f00;
+    text-align: center;
+    margin-left: 10px;
+    letter-spacing: 2px;
+    font-family: 'racing sans one';
+}
+
+h2, #menu {
+    text-align: center;
+    font-family: 'Doppio One', sans-serif;
+}
+
+.sidebar {
+    background: linear-gradient(to bottom, #5f255f, #160316); 
+    width: 250px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar a:hover {
+    background-color: #635e5a;
+}
+
+.main-content {
+    flex-grow: 1;
+    background-image: url(../images/dashboardBackground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+    text-align: center;
+}
+
+#details {
+    background-color: #eee3e3; 
+    padding: 25px; 
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    margin: 20px auto; 
+    width: 50%; 
+    font-size: 18px; 
+}
+
+.details_Title{
+    font-size: 50px;
+    font-family: 'Doppio One', sans-serif; ;
+}

@@ -1,0 +1,85 @@
+/* General page styling */
+body {
+    font-family: 'Doppio One', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.pagetitle80 {
+    text-align: center;
+    color: #4b2a72;
+    font-size: 32px;
+    margin-top: 30px;
+    font-family: 'Racing Sans One', cursive;
+}
+
+/* Table Styling */
+.table {
+    width: 80%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tablerow {
+    border-bottom: 1px solid #ddd;
+}
+
+.tablehead {
+    background-color: #4b2a72;
+    color: white;
+    padding: 10px 15px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.tabledata {
+    padding: 12px 15px;
+    color: #333;
+}
+
+.tablerow:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Button Styling */
+.submitbtn,
+.actionbtn2 {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px auto;
+    color: white;
+    background-color: #4b2a72;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.submitbtn:hover,
+.actionbtn2:hover {
+    background-color: #7a4bb1;
+}
+
+.actionbtn2 {
+    background-color: #f56a3f;
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+.actionbtn2:hover {
+    background-color: #ff8c57;
+}
+
+p {
+    text-align: center;
+    color: red;
+    font-size: 18px;
+}

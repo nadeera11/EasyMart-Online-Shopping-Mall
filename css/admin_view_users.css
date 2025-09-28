@@ -1,0 +1,45 @@
+body {
+    font-family: 'Doppio One', sans-serif;
+    margin: 5px;
+    padding: 0;
+}
+
+.table-title {
+    color: #333;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    font-size: 18px;
+}
+
+table th {
+    background-color: #462446;
+    color: white;
+}
+
+tbody {
+    background-color: #ddd;
+}
+
+table tr:hover {
+    background-color: #c2c2c2;
+}
+
+.actions a {
+    text-decoration: none;
+    padding: 5px;
+    background-color: #ff7f00;
+    color: white;
+    border-radius: 5px;
+}

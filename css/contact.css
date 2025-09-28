@@ -1,0 +1,203 @@
+.body {
+    margin: 0;
+}
+
+.pagetitle80 {
+    text-align: center;
+    color: #462446;
+
+    font-family: 'racing sans one';
+    font-size: 60px;
+    background-color: #ddd;
+    border-radius: 5px;
+    width: 80%;
+    margin: 0 auto 20px;
+}
+
+.pagetitle70 {
+    text-align: center;
+    color: #462446;
+
+    font-family: 'racing sans one';
+    font-size: 60px;
+    background-color: #ddd;
+    border-radius: 5px;
+    width: 73%;
+    margin: 0 auto 20px;
+}
+
+.table {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tablehead {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+    background-color: #462446;
+    color: white;
+    font-family: 'Doppio One';
+    font-weight: normal;
+}
+
+.tabledata {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+    color: #462446;
+    font-family: Arial, sans-serif;
+}
+
+.tablerow:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.tabledata:last-child {
+    text-align: center;
+}
+
+.actionbtn1 {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #000000;
+    border-radius: 3px;
+    background-color: #b05f6d;
+    font-family: 'Doppio One';
+}
+
+.actionbtn2 {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #000000;
+    border-radius: 3px;
+    background-color: #ff0e36;
+    font-family: 'Doppio One';
+}
+
+.emform {
+    max-width: 70%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.formlabel {
+    display: block;
+    color: #462446;
+    font-family: 'Doppio One';
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.formselec {
+    display: block;
+    color: #462446;
+    font-family: 'Doppio One';
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.forminput {
+    width: 98%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin: -5px auto;
+}
+
+.formselec {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin: -5px auto;
+}
+
+.submitbtn {
+    background-color: #ff7f00;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-family: 'Doppio One';
+    font-size: 20px;
+    max-width: 400px;
+    margin: 15px auto;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+}
+
+.viewbtn {
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    background-color: #b05f6d;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    max-width: 70%;
+    font-family: 'Doppio One';
+    font-size: 20px;
+}
+
+.heading {
+    font-family: 'Doppio One';
+    font-size: 40px;
+    margin: 0 auto;
+    color: #462446;
+    text-align: center;
+
+}
+
+.helptxt {
+    font-family: Arial, sans-serif;
+    margin: auto;
+    padding: 10px;
+    text-align: justify;
+    width: 80%;
+
+}
+
+.title {
+    color: #ff7f00;
+    font-family: 'Doppio One';
+    font-size: 30px;
+    margin-left: 10%;
+
+}
+
+.map1 {
+    position: relative;
+    width: 78%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: none;
+}
+
+.mapdiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: -100px;
+}
