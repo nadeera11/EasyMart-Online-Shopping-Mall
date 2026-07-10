@@ -35,7 +35,7 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit User</title>
-    <link rel="stylesheet" href="../css/admin_edit_user.css">
+    <link rel="stylesheet" href="../css/forms.css">
     <script src="../js/admin_edit_user.js"></script>
 </head>
 <body>

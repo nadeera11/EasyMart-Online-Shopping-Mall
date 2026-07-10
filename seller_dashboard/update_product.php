@@ -18,7 +18,6 @@
     <title>Add Product</title>
 
     <link rel="stylesheet" href="../css/products.css">
-    <script src="../js/index.js"></script>
 </head>
 <body>
     
@@ -52,9 +51,7 @@
     <label for="description">Description:</label><br>
     <textarea name="description" id="description"  rows="10" cols="40" id="des-box" <?php echo $product['description']; ?> placeholder="enter the description of product" required></textarea><br><br>
 
-    <input type="checkbox" class="inputStyle" id="check" onclick="enableButton()">Accept Privacy Policy and Terms<br/><br/>
-
-    <input type="submit" value="update" name="update_product" class="btn1" id="sbtn" disabled><br>
+    <input type="submit" value="update" name="update_product" class="btn1"><br>
 
     <a href="../seller_dashboard.php" class="btn1">Go back</a>
 </form>

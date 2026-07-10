@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 10, 2024 at 06:26 AM
+-- Generation Time: Oct 07, 2024 at 06:42 PM
 -- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- PHP Version: 8.0.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -69,9 +69,13 @@ CREATE TABLE `discount` (
 --
 
 INSERT INTO `discount` (`discount_id`, `sellerid`, `discountName`, `discountType`, `discountValue`, `description`, `startDay`, `endDay`, `status`) VALUES
-(26, 2, 'Test', 'percentage', 123.00, 'ssfaf', '0000-00-00', '0000-00-00', 'active'),
-(28, 4, '10:10 ', 'percentage', 20.00, 'Octomber 10 ', '2024-10-09', '2024-10-12', 'active'),
-(29, 4, '11:11', 'percentage', 10.00, 'asdfg', '0456-03-12', '0456-03-12', 'active');
+(13, 1, '11:11', 'percentage', 20.00, '   sjkbghcf', '2025-02-03', '2026-12-12', 'active'),
+(18, 1, '10:10', 'percentage', 23.00, 'esfdvsbc fdntrgffgvc ', '2024-10-10', '2024-11-01', 'active'),
+(21, 1, 'ddddddd', 'fixed', 1244.00, 'bjh,fbfkb erk.btnb . e;ti', '2026-10-10', '2027-02-20', 'active'),
+(22, 1, 'ccccccc', 'percentage', 78.00, 'mmmmmmmm', '2024-12-12', '2024-12-31', 'active'),
+(23, 1, 'wewewfev', 'fixed', 22.00, 'ghcdtrjdtjc jnh', '2024-12-01', '2024-12-31', 'active'),
+(24, 1, 'Summer Sale', 'percentage', 15.00, 'Get 15% off your total purchase during the summer season.', '2024-06-01', '2024-08-31', 'active'),
+(26, 2, 'Test', 'percentage', 123.00, 'ssfaf', '0000-00-00', '0000-00-00', 'active');
 
 -- --------------------------------------------------------
 
@@ -85,7 +89,7 @@ CREATE TABLE `inquiry` (
   `email` varchar(255) DEFAULT NULL,
   `description` text DEFAULT NULL,
   `DATE` date DEFAULT NULL,
-  `status` enum('new','pending','resolved') DEFAULT 'new'
+  `status` enum('open','closed') DEFAULT 'open'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -93,8 +97,8 @@ CREATE TABLE `inquiry` (
 --
 
 INSERT INTO `inquiry` (`inquiry_id`, `name`, `email`, `description`, `DATE`, `status`) VALUES
-(1, 'Nimal Perera', 'nimalperera@gmail.com', 'How can I track my order?', '2024-10-01', 'new'),
-(2, 'Amara Fernando', 'amarasfernando@hotmail.com', 'Do you offer international shipping?', '2024-10-02', 'resolved');
+(1, 'Nimal Perera', 'nimalperera@gmail.com', 'How can I track my order?', '2024-10-01', 'open'),
+(2, 'Amara Fernando', 'amarasfernando@hotmail.com', 'Do you offer international shipping?', '2024-10-02', 'open');
 
 -- --------------------------------------------------------
 
@@ -110,7 +114,6 @@ CREATE TABLE `order` (
   `product_id` int(11) DEFAULT NULL,
   `DATE` date DEFAULT NULL,
   `address` varchar(255) DEFAULT NULL,
-  `image` varchar(255) DEFAULT NULL,
   `payment_method` varchar(50) DEFAULT NULL,
   `price` decimal(10,2) DEFAULT NULL,
   `status` enum('Pending','Shipped','Delivered','Canceled') NOT NULL DEFAULT 'Pending'
@@ -120,12 +123,8 @@ CREATE TABLE `order` (
 -- Dumping data for table `order`
 --
 
-INSERT INTO `order` (`order_id`, `user_id`, `name`, `sellerid`, `product_id`, `DATE`, `address`, `image`, `payment_method`, `price`, `status`) VALUES
-(8, 2, 'Chamuditha Sanka', 2, 1, '2024-10-07', '3131231', NULL, 'bank_transfer', 1500.00, 'Pending'),
-(11, 2, 'fd fff', 4, 5, '2024-10-10', 'fff', NULL, 'credit_card', 9000.00, 'Pending'),
-(12, 2, 'fdd fdf', 4, 5, '2024-10-10', 'fddd', NULL, 'credit_card', 9000.00, 'Pending'),
-(13, 1, 's s', 4, 6, '2024-10-10', 'w', NULL, 'credit_card', 6000.00, 'Pending'),
-(14, 1, '', 2, 1, '2024-10-10', 'ws', 's s', 'credit_card', 7500.00, 'Pending');
+INSERT INTO `order` (`order_id`, `user_id`, `name`, `sellerid`, `product_id`, `DATE`, `address`, `payment_method`, `price`, `status`) VALUES
+(8, 2, 'Chamuditha Sanka', 2, 1, '2024-10-07', '3131231', 'bank_transfer', 1500.00, 'Pending');
 
 -- --------------------------------------------------------
 
@@ -241,19 +240,19 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `discount`
 --
 ALTER TABLE `discount`
-  MODIFY `discount_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `discount_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `inquiry`
 --
 ALTER TABLE `inquiry`
-  MODIFY `inquiry_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `inquiry_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `order`
 --
 ALTER TABLE `order`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `product`

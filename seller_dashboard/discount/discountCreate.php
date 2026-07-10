@@ -4,8 +4,6 @@ include '../../connect.php';
 
 $sellerId = $_SESSION['user_id'];
 
-// Initialize a variable for the popup status
-$popupVisible = false; 
 
 if (isset($_POST['create'])) {
     $discountName = $_POST['discountName'];
@@ -22,8 +20,11 @@ if (isset($_POST['create'])) {
 
 
     if ($conn->query($sql) === TRUE) {
-        $popupVisible = true; 
+        echo "<script>
+            alert('New discount created successfully.');
+            window.location.href = 'discountRead.php';
 
+        </script>";
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
@@ -41,8 +42,6 @@ if (isset($_POST['create'])) {
     <link href='https://fonts.googleapis.com/css?family=Doppio One' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Racing Sans One' rel='stylesheet'>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
-        
 </head>
 
 <body>
@@ -89,22 +88,5 @@ if (isset($_POST['create'])) {
     
     <a class="viewbtn" href="discountRead.php">View Discounts</a>
     <?php include "../../footer.php" ?>
-
-    <!-- Overlay for the popup -->
-    <div class="overlay <?php if ($popupVisible) echo 'show-overlay'; ?>"></div>
-
-    <!-- Popup that appears after form submission -->
-    <div class="popup <?php if ($popupVisible) echo 'open-popup'; ?>" id="popup">
-        <img class="popupimg" src="../../images/okmark.png">
-        <h2 class="popuphead">Thank You!</h2>
-        <p class="popuppara">Your discount has been successfully added. Thanks!</p>
-        <button class="popupbtn" type="button" onclick="redirectHome()">OK</button>
-    </div>
-
-    <script>
-        function redirectHome() {
-            window.location.href = 'discountRead.php'; // Redirect to home page
-        }
-    </script>
 </body>
 </html>

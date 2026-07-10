@@ -1,11 +1,11 @@
 <?php
-session_start();
 include '../../connect.php';
 
-$sellerId = $_SESSION['user_id'];
-$discount = $conn->query("SELECT * FROM discount WHERE sellerid = $sellerId");
+
+$discount = $conn->query("SELECT * FROM discount"); 
 
 
+$discount = $conn->query("SELECT * FROM discount");
 ?>
 
 <!DOCTYPE html>

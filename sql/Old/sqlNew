@@ -1,0 +1,110 @@
+-- 1. User Table (For Customers and Sellers)
+CREATE TABLE 'User' (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    firstName VARCHAR(50),
+    lastName VARCHAR(50),
+    email VARCHAR(100),
+    password VARCHAR(255),
+    phone_number VARCHAR(15),
+    address TEXT,
+    account_type ENUM('customer', 'seller')  -- Differentiates between customer and seller
+);
+
+-- 2. Admin Table (Separate for Admins)
+CREATE TABLE 'Admin' (
+    admin_id INT AUTO_INCREMENT PRIMARY KEY,
+    firstName VARCHAR(50),
+    lastName VARCHAR(50),
+    password VARCHAR(255)
+);
+
+-- 3. Order Table (For Sellers and Customers)
+CREATE TABLE 'Order' (
+    orderid INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,  -- Foreign key to User (Customer ID)
+    sellerid INT,  -- Foreign key to User (Seller ID)
+    product_id INT,  -- Foreign key to Product
+    DATE DATETIME,
+    address TEXT,
+    payment_method ENUM('credit_card', 'paypal', 'cash_on_delivery'),
+    price DECIMAL(10, 2),
+    status ENUM('pending', 'shipped', 'delivered', 'canceled'),
+    FOREIGN KEY (user_id) REFERENCES 'User'(user_id) ON DELETE CASCADE,
+    FOREIGN KEY (sellerid) REFERENCES 'User'(user_id) ON DELETE CASCADE
+);
+
+-- 4. Product Table (For Sellers)
+CREATE TABLE 'Product' (
+    productid INT AUTO_INCREMENT PRIMARY KEY,
+    sellerid INT,  -- Foreign key to User (Seller ID)
+    name VARCHAR(100),
+    description TEXT,
+    price DECIMAL(10, 2),
+    image VARCHAR(255),
+    category VARCHAR(50),
+    FOREIGN KEY (sellerid) REFERENCES 'User'(user_id) ON DELETE CASCADE
+);
+
+-- 5. Discount Table (For Sellers)
+CREATE TABLE 'Discount' (
+    discountid INT AUTO_INCREMENT PRIMARY KEY,
+    sellerid INT,  -- Foreign key to User (Seller ID)
+    description TEXT,
+    discount_code VARCHAR(50),
+    FOREIGN KEY (sellerid) REFERENCES 'User'(user_id) ON DELETE CASCADE
+);
+
+-- 6. Inquiry Table (For Customers and Admins)
+CREATE TABLE 'Inquiry' (
+    inquiry_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,  -- Foreign key to User (Customer ID)
+    description TEXT,
+    DATE DATE,
+    status ENUM('open', 'closed'),
+    FOREIGN KEY (user_id) REFERENCES 'User'(user_id) ON DELETE CASCADE
+);
+
+
+
+
+-- 1. Insert Sample Users (Customers and Sellers)
+INSERT INTO `User` (firstName, lastName, email, password, phone_number, address, account_type) VALUES
+('Nimal', 'Perera', 'nimalperera@gmailcom', 'Nimal@123', '0123456789', 'Colombo, Sri Lanka', 'customer'),
+('Kumar', 'Seneviratne', 'kumarseneviratne@yahoocom', 'Kumar@456', '0123456790', 'Kandy, Sri Lanka', 'seller'),
+('Amara', 'Fernando', 'amarasfernando@hotmailcom', 'Amara@789', '0123456791', 'Galle, Sri Lanka', 'customer'),
+('Ravi', 'Jayasinghe', 'ravijayasinghe@gmailcom', 'Ravi@101', '0123456792', 'Negombo, Sri Lanka', 'seller');
+
+-- 2. Insert Sample Admins
+INSERT INTO `Admin` (firstName, lastName, password) VALUES
+('Admin', 'User1', 'Admin@Admin1'),
+('Admin', 'User2', 'Admin@Admin2');
+
+-- 3. Insert Sample Products
+INSERT INTO `Product` (sellerid, name, description, price, image, category) VALUES
+(2, 'Men\'s Cotton T-Shirt', 'High-quality cotton T-shirt for men.', 1500.00, 'mens_tshirt.jpg', 'Clothing'),
+(2, 'Women\'s Cotton Dress', 'Stylish cotton dress for women.', 2500.00, 'womens_dress.jpg', 'Clothing'),
+(2, 'Samsung Galaxy S21', 'Latest Samsung smartphone with advanced features.', 120000.00, 'samsung_galaxy_s21.jpg', 'Electronics'),
+(2, 'LG 55-Inch Smart TV', 'High-definition smart TV with streaming features.', 150000.00, 'lg_smart_tv.jpg', 'Electronics'),
+(4, 'Wireless Headphones', 'High-quality wireless headphones for music lovers.', 9000.00, 'wireless_headphones.jpg', 'Electronics'),
+(4, 'Running Shoes', 'Comfortable running shoes for daily workouts.', 6000.00, 'running_shoes.jpg', 'Clothing');
+
+-- 4. Insert Sample Discounts
+INSERT INTO `Discount` (sellerid, description, discount_code) VALUES
+(2, '10% off on Clothing', 'CLOTHING10'),
+(2, '5% off on Electronics', 'ELECTRO5'),
+(4, '15% off on all Electronics', 'ELECTRO15'),
+(4, '20% off on all Clothing', 'CLOTHING20');
+
+-- 5. Insert Sample Orders
+INSERT INTO `Order` (user_id, sellerid, product_id, DATE, address, payment_method, price, status) VALUES
+(1, 2, 1, '2024-10-01', 'Colombo, Sri Lanka', 'credit_card', 1500.00, 'pending'),
+(3, 4, 6, '2024-10-02', 'Galle, Sri Lanka', 'paypal', 6000.00, 'shipped');
+
+-- 6. Insert Sample Inquiries
+INSERT INTO `Inquiry` (user_id, description, DATE, status) VALUES
+(1, 'How can I track my order?', '2024-10-01', 'open'),
+(3, 'Do you offer international shipping?', '2024-10-02', 'open');
+
+
+
+

@@ -1,5 +1,5 @@
 <?php
-include '../../connect.php'; // Include database connection file
+include 'connect.php'; // Include database connection file
 
 // Handle Delete
 if (isset($_GET['id'])) {

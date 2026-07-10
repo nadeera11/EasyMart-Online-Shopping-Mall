@@ -1,0 +1,44 @@
+CUSTOMER DASHBAORD
+	
+orders - users - create / read
+
+
+SELLER DASHBAORD
+
+orders - seller - read / update / delete
+
+discounts - seller -  c / r / u / d 
+		
+products - seller - create / read/ update / delete
+
+
+ADMIN DASHBOARD
+
+manage users - seller/ customer - create
+			 - admin - r / u / delete.
+			 
+inquiry - users - create/ read
+		- admin - r u d	
+		
+		
+seller dashboard - view/manage user detials(firstName,lastName,email,password,phone_num,address) 
+				 - view recieved orders(date, address, payment method, price, userid, status)
+				 - view manage products(productid, name, description, price, image, sellerid, category)
+				 - view manage discounts (sellerid, discount id, discount name, description,discount code)
+
+
+customer dashboard - view/manage user detials(firstName,lastName,email,password,phone_num,address) &&
+				   - view past orders. (date, address, payment method, price, status)
+				   
+
+
+admin dashboard - view/manage user detials(firstName,lastName,email,password,phone_num,address) if user deleted products should be delete as well
+				- view manage products (productid, name, description, price, image, sellerid, category)
+				- view manage inquiries(inquiry_id, description, date, user_id, status)
+				- view manage/ add admins(firstName, lastName, password, admin_id)
+
+
+products
+product details
+register
+checkout

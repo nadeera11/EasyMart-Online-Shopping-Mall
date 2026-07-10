@@ -22,7 +22,7 @@ include '../connect.php';
 session_start();
 
 
-if(isset($_POST['add_product'])){
+
     $sellerid=$_SESSION['user_id'];
     $name = $_POST['name'];
     $price = $_POST['price'];
@@ -34,16 +34,18 @@ if(isset($_POST['add_product'])){
     $target_file = $target_dir . basename($_FILES["image"]["name"]);
     $image = $_FILES["image"]["name"];
 
-}
+  
     
     if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
         
+
+       
         $sql = "INSERT INTO product (name,price,quantity, description,image,sellerid) VALUES ('$name','$price','$quantity', '$description', '$image','$sellerid')";
         
         if ($conn->query($sql) === TRUE) {
             echo "New product added successfully! ";
         } else {
-            echo "Error: " ;
+            echo "Error: " . $sql . "<br>" . $conn->error;
         }
     } else {
         echo "Sorry, there was an error uploading your file.";

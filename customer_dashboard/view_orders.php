@@ -23,7 +23,7 @@ $orders_result = $conn->query($orders_query);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Orders</title>
-    <link rel="stylesheet" href="../css/customer_view_orders.css">
+    <link rel="stylesheet" href="../css/tables.css">
 </head>
 <body>
     <?php include "../header.php"; ?>

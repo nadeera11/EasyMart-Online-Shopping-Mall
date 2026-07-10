@@ -61,7 +61,7 @@ $result = $conn->query($sql);
             echo "<td class='row'>" . $row['description'] . "</td>";
             echo "<td class='row'><img src='uploads/" . $row['image'] . "' width='100px'></td>";
             echo "<td class='row-box'><a href='update_product.php?product_id=" . $row['product_id'] . "'><button id='upd-btn'>Update</a></td>";
-            echo "<td class='row-box'><a href='deleteproducts.php?product_id=" . $row['product_id'] . "' onclick='return confirm(\"Are you sure you want to delete this product?\")'><button id='del-btn'>Delete</a></td>";
+            echo "<td class='row-box'><a href='deleteproducts.php?product_id=" . $row['product_id'] . "' onclick='return confirm(\"Are you sure?\")'><button id='del-btn'>Delete</a></td>";
             echo "</tr>";
                    
                     

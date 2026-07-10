@@ -25,7 +25,7 @@ if (isset($_GET['message'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin - View Users</title>
-    <link rel="stylesheet" href="../css/admin_view_users.css"> 
+    <link rel="stylesheet" href="../css/tables.css"> 
 </head>
 <body>
     <?php include "../header.php" ?>
@@ -61,7 +61,7 @@ if (isset($_GET['message'])) {
                         <td><?php echo $user['address']; ?></td>
                         <td><?php echo $user['account_type']; ?></td>
                         <td class="actions">
-                            <a href="edit_user.php?user_id=<?php echo $user['user_id']; ?>">Update</a>
+                            <a href="edit_user.php?user_id=<?php echo $user['user_id']; ?>">Edit</a>
                             <a href="delete_user.php?user_id=<?php echo $user['user_id']; ?>" onclick="return confirmDelete();">Delete</a>
                         </td>
                     </tr>

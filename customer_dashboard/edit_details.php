@@ -47,7 +47,7 @@ $conn->close();
     <link href='https://fonts.googleapis.com/css?family=Doppio One' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Racing Sans One' rel='stylesheet'>
     <link rel="stylesheet" href="customer_dashboard.css"> 
-    <link rel="stylesheet" href="../css/customer_edit_details.css">
+    <link rel="stylesheet" href="../css/forms.css">
     <script src="../js/user_edit_details.js"></script>
 </head>
 <body>

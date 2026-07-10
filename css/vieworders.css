@@ -1,5 +1,4 @@
 body {
-    font-family: 'Doppio One', sans-serif;
     margin: 5px;
     padding: 0;
 }
@@ -11,10 +10,11 @@ body {
     background: rgb(197, 191, 191);
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Doppio One', sans-serif;
 }
 
 
-.table-title {
+.odrs {
     color: #333;
     text-align: center;
 }
@@ -72,22 +72,3 @@ table td img {
     height: auto;
 }
 
-.actions a {
-    text-decoration: none;
-    padding: 5px;
-    background-color: #ff7f00;
-    color: white;
-    border-radius: 5px;
-}
-
-#a-tag{
-    font-family: 'Doppio One', sans-serif;
-    background-color:#ff7f00;
-    margin-left: 20px;
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
-    width: 40%;
-    height: 50px;
-    text-decoration: none;
- }

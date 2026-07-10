@@ -13,8 +13,6 @@ $sql = "SELECT * FROM Product WHERE product_id = '$product_id'";
 $result = $conn->query($sql);
 $product = $result->fetch_assoc();
 
-$orderSuccess = false; 
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $firstName = $_POST['firstName'];
     $lastName = $_POST['lastName'];
@@ -23,6 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $quantity = $_POST['quantity']; 
     $totalPrice = $product['price'] * $quantity; 
 
+    
     if (empty($firstName) || empty($lastName) || empty($address) || empty($paymentMethod) || empty($quantity)) {
         echo "Please fill in all fields.";
     } else {
@@ -34,7 +33,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                        VALUES ('$user_id', '$seller_id', '$product_id', CURDATE(), '$address', '$paymentMethod', '$totalPrice', 'pending', '$name')";
         
         if ($conn->query($sql_insert) === TRUE) {
-            $orderSuccess = true; 
+            echo "Order placed successfully!";
+        
         } else {
             echo "Error: " . $sql_insert . "<br>" . $conn->error;
         }
@@ -57,10 +57,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             const totalPrice = price * quantity;
             document.getElementById('totalPrice').innerText = 'LKR ' + totalPrice.toFixed(2);
         }
-
-        function showOrderSuccess() {
-            alert("Order placed successfully!");
-        }
     </script>
 </head>
 <body>
@@ -68,7 +64,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <div class="buy-now-container">
         <h2>Buy Now: <?php echo $product['name']; ?></h2>
-
+         
+        
         <form method="POST" action="">
             <label for="firstName">First Name:</label>
             <input type="text" name="firstName" id="firstName" required>
@@ -97,12 +94,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 
     <?php include 'footer.php'; ?>
-
-    <?php if ($orderSuccess): ?>
-        <script>
-            showOrderSuccess();
-        </script>
-    <?php endif; ?>
 </body>
 </html>
 

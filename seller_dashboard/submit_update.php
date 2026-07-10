@@ -28,15 +28,12 @@ if(isset($_POST['update_product'])){
 
     if($data){
        
-        echo "<script>alert('Product updated successfully'); 
-        window.location.href='view_products.php';
-        </script>";
+        echo "<script>alert('Product updated successfully'); window.location.href='view_products.php';</script>";
     
     }
     
     else{
-        echo "<script>alert('Failed to update product');  
-        window.location.href='update_product.php';</script>";
+        echo "<script>alert('Failed to update product'); window.history.back();</script>";
    
     }
 
